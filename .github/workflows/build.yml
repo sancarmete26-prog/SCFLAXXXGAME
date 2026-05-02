@@ -1,4 +1,4 @@
-name: Build APK
+name: Android APK Build
 on: [push, workflow_dispatch]
 
 jobs:
@@ -10,7 +10,7 @@ jobs:
       - name: Build with Buildozer
         uses: ArtemSerebrennikov/buildozer-action@v1
         with:
-          buildozer_version: master
           command: buildozer android debug
-          repository_root: .
+          buildozer_version: master
+          
           
